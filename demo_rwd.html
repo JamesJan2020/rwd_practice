@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #menu_control {
+            position: absolute;
+            /* z-index: 2; */
+        }
+
+        .header {
+            background-color: rgb(206, 205, 205);
+            height: 50px;
+            position: relative;
+        }
+
+        .logo a {
+            display: block;
+            padding: 5px;
+        }
+
+        .menu_btn {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+
+        .menu_btn span {
+            opacity: 0;
+            color: white;
+        }
+
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 2px;
+            left: 2px;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #fff, 0px -8px 0px #fff;
+
+        }
+
+        nav {
+            width: 80%;
+            height: calc(100vh - 50px);
+            background-color: rgb(8, 8, 8);
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: yellow;
+            padding: 10px 20px;
+            font-size: 2rem;
+            border-bottom: 1px solid white;
+        }
+
+        #menu_control:checked~.header nav {
+            left: 0;
+        }
+
+        @media screen and (min-width:768px) {
+            .menu_btn {
+                display: none;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                background-color: #000;
+                align-items: center;
+
+            }
+
+            nav {
+                position: relative;
+                display: flex;
+                left: 0;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+
+            }
+
+            nav a {
+                border-bottom: none;
+            }
+        }
+
+        img {
+            vertical-align: bottom;
+        }
+
+        .banner {
+            margin-bottom: 0;
+        }
+
+        .banner img {
+            width: 100%;
+
+        }
+
+        .item-group {
+            width: 100%;
+            max-width: 1440px;
+            margin: auto;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .item {
+            margin: 0 10px 20px;
+
+        }
+
+        .title {
+            background-color: rgb(194, 191, 191);
+            margin: 0 0 20px;
+            padding: 30px 10px;
+        }
+
+        .title h2 {
+            text-align: center;
+            font-size: 46px;
+        }
+
+        .title p {
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .item h3 {
+            text-align: center;
+        }
+
+        .item .pic img {
+            width: 100%;
+        }
+
+        .service {
+            background-color: rgb(190, 190, 236);
+        }
+
+        .service img {
+            margin-top: 15px;
+        }
+
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex;
+            }
+
+            .service .item {
+                display: flex;
+            }
+
+            .service .item .pic,
+            .service .item .text {
+                width: 50%;
+            }
+
+            .service .item .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40/?random=1"></a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </nav>
+    </div>
+    <div class="banner">
+        <img src="https://picsum.photos/1400/450/?random=31">
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas praesentium explicabo, officiis.
+                </p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=1">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=2">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=3">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=5">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas praesentium explicabo, officiis.
+                </p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=21">
+                    </div>
+                    <h3>title</h3>
+                    <div class="text">
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=22">
+                    </div>
+                    <h3>title</h3>
+                    <div class="text">
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=23">
+                    </div>
+                    <h3>title</h3>
+                    <div class="text">
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=24">
+                    </div>
+                    <h3>title</h3>
+                    <div class="text">
+                        <p>為何兩年爭取所有人您的夫妻動物本來規定隊伍三人飯店心中重複，團隊我覺得推薦真正土地五年任務不管報導鈴聲下載，好像團結娛樂工藝對待，平台活力對著含有離線登錄形成，你有敵人應當如下灌水，版本主體焦點春天我來歡迎光臨一下優秀，矛盾體驗令人目光已被，所在戀愛，大。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; copoyright 2020 by JamesJan
+    </div>
+
+
+</body>
+
+</html>
